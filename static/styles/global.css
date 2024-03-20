@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+:root {
+  --fg: rgb(243, 243, 243);
+  --bg: rgb(255, 255, 255);
+  --accent: rgb(37, 37, 37);
+}
+
+body,
+html,
+:root {
+  background: var(--bg);
+
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+}
+
+.reserva {
+  background: var(--fg);
+}
+
+#header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  height: 4rem;
+  padding: 0 4rem;
+
+  justify-content: space-between;
+}
+
+#header a {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  background-color: var(--accent);
+  padding: 1rem 1.5rem;
+
+  border-radius: 15px;
+}
+
+#header a:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  border: solid rgb(109, 109, 109) thin;
+  background-color: var(--fg);
+
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 2rem 5rem;
+}
+
+.modal input {
+  width: 400px;
+  height: 45px;
+  border: solid thin rgb(66, 66, 66);
+  border-radius: 5px;
+
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+
+  color: rgb(41, 41, 41);
+
+  outline: none;
+}
+
+.modal input:focus {
+  border: solid thin rgb(48, 48, 48);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+#cr_action {
+  font-size: 17px;
+  font-weight: 600;
+  background-color: var(--accent);
+  width: 100%;
+
+  height: 45px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.reservas_container {
+  gap: 2rem;
+}
+
+.reserva_card {
+  background-color: var(--fg);
+
+  border-radius: 10px;
+
+  padding: 2rem 5rem;
+  width: 800px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card_header {
+}
+
+.reserva_campo {
+  color: var(--accent);
+}
+
+.reserva_label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.reserva_value {
+  font-size: 18px;
+  font-weight: 700;
+}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block title %}Criar reserva{% endblock %} {% block
+content %}
+<form class="modal" action="/criar-reserva" method="post">
+  <div class="campo">
+    <span>Nome completo</span>
+    <input type="text" class="inp" id="name" name="name" />
+  </div>
+  <div class="campo">
+    <span>Data</span>
+    <input type="date" class="inp" id="date" name="date" />
+  </div>
+  <div class="campo">
+    <span>Duração em dias</span>
+    <input type="text" class="inp" id="duration" name="duration" />
+  </div>
+
+  <button id="cr_action" type="submit">Criar reserva</button>
+</form>
+{% endblock %}

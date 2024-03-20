@@ -1,0 +1,24 @@
+{
+  "current_user": "essdggdfg",
+  "reservas": [
+    {
+      "id": "DFgdfhfgjhdfg",
+      "nome": "fulano de tal",
+      "quarto": "101",
+      "id_usuario": "Ricardo Vigliano",
+      "data": "05-02-2024",
+      "diarias": 2
+    }
+  ],
+  "quartos": [101, 102, 103],
+  "usuarios": [
+    {
+      "id": "dfgdfhdfh",
+      "nome": "admin",
+      "email": "dfgdfh@ddgdfh",
+      "senha": "dsgdg",
+      "admin": true,
+      "reservas": ["tfhgfh", "dfhdfhfgh", "dffhdfhfdh"]
+    }
+  ]
+}

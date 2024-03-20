@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block title %}Reserva{% endblock %} {% block
+content %}
+<div class="reserva_card">
+  <div class="card_header">
+    <a href="{{ url_for('excluir_reserva', id=response[1]) }}" class=""
+      >Excluir reserva</a
+    >
+  </div>
+  {{response}}
+</div>
+{% endblock %}

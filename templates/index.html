@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block title %}Dashboard{% endblock %} {% block
+content %} {% if reservas %}
+<div class="reservas_container">
+  {% for reserva in reservas %}
+
+  <div class="reserva_card">
+    <div class="card_header">
+      <a href="{{ url_for('excluir_reserva', id=reserva['id']) }}" class=""
+        >Excluir reserva</a
+      >
+      <a href="{{ url_for('criar_reserva', id=reserva['id']) }}" class=""
+        >Editar reserva</a
+      >
+    </div>
+
+    <div class="reserva_campo">
+      <div class="reserva_label">Nome completo</div>
+      <div class="reserva_value">{{ reserva['nome'] }}</div>
+    </div>
+    <div class="reserva_campo">
+      <div class="reserva_label">Numero do quarto</div>
+      <div class="reserva_value">{{ reserva['quarto'] }}</div>
+    </div>
+    <div class="reserva_campo">
+      <div class="reserva_label">Check-in</div>
+      <div class="reserva_value">{{ reserva['data'] }}</div>
+    </div>
+    <div class="reserva_campo">
+      <div class="reserva_label">Diarias</div>
+      <div class="reserva_value">{{ reserva['duracao'] }}</div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<h2>Nenhuma reserva no momento</h2>
+{% endif %} {% endblock %}

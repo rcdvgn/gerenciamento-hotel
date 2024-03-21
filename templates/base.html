@@ -12,9 +12,25 @@
   </head>
   <body>
     <header id="header">
-      <a href="/criar-reserva">Criar reserva</a>
+      <div class="h_left">
+        <a href="/">Reservas</a>
+        <a href="/criar-reserva">Criar reserva</a>
+        <form action="/consulta" method="post" class="consulta">
+          <input
+            placeholder="ID da reserva"
+            type="text"
+            name="query"
+            id="query"
+          />
+          <button type="submit">Consultar</button>
+        </form>
+      </div>
+      {% if user['admin'] == True %}
+      <a href="/admin">Area do administrador</a>
+      {% endif %}
       <a href="/logout">Logout</a>
     </header>
+    <div class="page_title">{% block page_title %} {% endblock %}</div>
     <div class="container">{% block content %} {% endblock %}</div>
   </body>
 </html>

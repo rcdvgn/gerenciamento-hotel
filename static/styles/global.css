@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
 :root {
-  --fg: rgb(243, 243, 243);
-  --bg: rgb(255, 255, 255);
+  --bg: rgb(241, 241, 241);
+  --fg: rgb(255, 255, 255);
   --accent: rgb(37, 37, 37);
 }
 
@@ -24,8 +24,14 @@ html,
   display: flex;
   align-items: center;
   justify-content: center;
-
   height: 100vh;
+  max-width: 1500px;
+  padding: 2rem 4rem;
+}
+
+.greetings {
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .reserva {
@@ -43,7 +49,27 @@ html,
   justify-content: space-between;
 }
 
-#header a {
+.h_left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  height: 100%;
+}
+
+.consulta input {
+  border: solid thin var(--accent);
+  height: 45px;
+  width: 400px;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+#header a,
+button {
   color: white;
   font-size: 18px;
   font-weight: 700;
@@ -53,11 +79,16 @@ html,
   background-color: var(--accent);
   padding: 1rem 1.5rem;
 
-  border-radius: 15px;
+  border-radius: 5px;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
 
-#header a:hover {
-  opacity: 0.7;
+#header a:hover,
+button:hover {
+  opacity: 0.8;
 }
 
 .modal {
@@ -115,10 +146,13 @@ html,
   outline: none;
   border: none;
   color: white;
+
+  padding: 0 !important;
 }
 
 .reservas_container {
   gap: 2rem;
+  margin: 4rem;
 }
 
 .reserva_card {
@@ -149,4 +183,47 @@ html,
 .reserva_value {
   font-size: 18px;
   font-weight: 700;
+}
+
+.box_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.box {
+  height: 250px;
+  width: 250px;
+  border-radius: 10px;
+  background-color: var(--fg);
+  padding: 1rem;
+}
+
+.box_title {
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.box_title:hover {
+  text-decoration: underline;
+}
+
+.box_subtitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.page_title {
+  height: 4rem;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  padding-left: 4rem;
+
+  font-weight: 800;
 }

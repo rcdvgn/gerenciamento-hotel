@@ -3,17 +3,63 @@ content %}
 <form class="modal" action="/criar-reserva" method="post">
   <div class="campo">
     <span>Nome completo</span>
-    <input type="text" class="inp" id="name" name="name" />
+    <input
+      type="text"
+      class="inp"
+      id="name"
+      name="name"
+      value="{{'' if not existing_reserva else existing_reserva['nome']}}"
+    />
+  </div>
+  <div class="campo">
+    <span>Hotel</span>
+    <select
+      name="hotel"
+      
+      id="hotel"
+    >
+      {% for hotel in hoteis %}
+        <option value="{{ hotel }}" {{"selected" if existing_reserva['hotel'] == hotel }}>{{ hotel }}</option>
+      {% endfor %}
+    </select>
   </div>
   <div class="campo">
     <span>Data</span>
-    <input type="date" class="inp" id="date" name="date" />
+    <input
+      type="date"
+      class="inp"
+      id="date"
+      name="date"
+      value="{{'' if not existing_reserva else existing_reserva['data']}}"
+    />
   </div>
   <div class="campo">
     <span>Duração em dias</span>
-    <input type="text" class="inp" id="duration" name="duration" />
+    <input
+      type="text"
+      class="inp"
+      id="duration"
+      name="duration"
+      value="{{'' if not existing_reserva else existing_reserva['duracao']}}"
+    />
+
+    <input
+      type="hidden"
+      class="inp"
+      id="id"
+      name="id"
+      value="{{'' if not existing_reserva else existing_reserva['id']}}"
+    />
+
+    <input
+      type="hidden"
+      class="inp"
+      id="room"
+      name="room"
+      value="{{'' if not existing_reserva else existing_reserva['quarto']}}"
+    />
   </div>
 
-  <button id="cr_action" type="submit">Criar reserva</button>
+  <button id="cr_action" type="submit">{{"Editar reserva" if existing_reserva else "Criar reserva"}}</button>
 </form>
 {% endblock %}

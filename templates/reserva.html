@@ -2,8 +2,11 @@
 content %}
 <div class="reserva_card">
   <div class="card_header">
-    <a href="{{ url_for('excluir_reserva', id=response[1]) }}" class=""
+    <a href="{{ url_for('excluir_reserva', id=response['id']) }}" class=""
       >Excluir reserva</a
+    >
+    <a href="{{ url_for('criar_reserva', edit_id=response['id']) }}" class=""
+      >Editar reserva</a
     >
   </div>
   {{response}}

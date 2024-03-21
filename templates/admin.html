@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block title %}Area do administrador{% endblock %}
+{% block page_title %}Area do administrador{% endblock %} {% block content %}
+<div class="box_container">
+  <div class="box">
+    <a class="box_title" href="/adicionar-hotel">Adicionar hotel</a>
+  </div>
+  {% for hotel_info in hoteis_info %}
+  <div class="box">
+    <a href="{{url_for('quartos', hotel=hotel_info['nome'])}}" class="box_title"
+      >{{ hotel_info['nome'] }}</a
+    >
+    <div class="box_subtitle">{{ hotel_info['num_quartos'] }} quartos</div>
+    <a
+      class="box_subtitle"
+      href="{{url_for('excluir_hotel', hotel=hotel_info['nome'])}}"
+      >Excluir
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block title %}Adicionar quarto{% endblock %} {%
+block page_title %}Adicionar quarto{% endblock %} {% block content %}
+<form class="modal" action="/adicionar-quarto/{{hotel}}" method="post">
+  <div class="campo">
+    <span>Numero do quarto</span>
+    <input
+      type="number"
+      min="0"
+      class="inp"
+      id="num_quarto"
+      name="num_quarto"
+    />
+  </div>
+  <button id="cr_action" type="submit">Adicionar quarto</button>
+</form>
+{% endblock %}
